@@ -1,2 +1,3 @@
 # Procfile contents for bakerbot (startup)
-worker: yarn start
+worker: yarn build
+worker: yarn start --prod
