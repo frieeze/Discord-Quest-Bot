@@ -4,11 +4,11 @@
   "description": "A discord bot that can send a message whenever there is a new quest created.",
   "main": "src/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
     "lint": "eslint --ext .ts,.js src",
     "lint:fix": "eslint --ext .ts,.js src --fix",
-    "build": "tsc",
-    "start --prod": "node dist/"
+    "start": "node dist/"
   },
   "keywords": [],
   "author": "lolboysg",
