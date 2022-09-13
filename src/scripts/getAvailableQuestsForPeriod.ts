@@ -1,5 +1,5 @@
 import { BigNumber, Contract } from 'ethers';
-import { WEEK } from 'src/globals/time';
+import { WEEK } from '../globals/time';
 import provider from '../config/etherProvider';
 import QuestBoardAbi from '../data/abi/QuestBoardAbi.json';
 
