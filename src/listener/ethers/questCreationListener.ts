@@ -47,12 +47,10 @@ const questCreationListener =
           channel &&
           (channel.type === ChannelType.GuildText || channel.type === ChannelType.GuildNews)
         ) {
-          await channel.send({ embeds: [embed] });
-        } else {
-          console.error(`Channel ${channelId} not found.`);
+          const message = await channel.send({ embeds: [embed] });
+          if (channel.type === ChannelType.GuildNews) message.crosspost();
         }
       });
-      console.log(`New ${protocolType} quest created.`);
     } catch (err) {
       console.error(err);
     }
