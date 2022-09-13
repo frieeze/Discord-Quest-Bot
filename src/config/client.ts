@@ -1,16 +1,13 @@
 import { Client } from 'discord.js';
 import 'dotenv/config';
-import setStatusForAvailableQuests from '../scripts/setStatusForAvailableQuests';
 
 const token = process.env.DISCORD_TOKEN;
 const client = new Client({
-  intents: ['Guilds'],
+  intents: ['GuildMessages', 'Guilds', 'MessageContent'],
 });
 
-client.on('ready', async () => {
+client.on('ready', () => {
   console.log('Bot Online!');
-
-  await setStatusForAvailableQuests();
 });
 
 client.login(token);
